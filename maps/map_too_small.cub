@@ -1,0 +1,25 @@
+
+
+F 20,  4 ,     0
+
+NO textures/borg.xpm
+SO               textures/borg.xpm
+
+
+
+WE       textures/borg.xpm
+EA textures/borg.xpm
+
+
+
+
+C       200,34,54
+
+         1
+ 11111   1
+        1N1
+11111111110111
+1         1
+          11111111111111111
+            1
+            1
