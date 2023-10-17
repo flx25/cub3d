@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 12:51:44 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/10/17 10:56:02 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/10/17 13:17:37 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,10 @@ int	getparameters(char *argv1, t_cub3d *cub3d)
 int	parser(char *argv1, t_cub3d *cub3d)
 {
 	char	*map;
+	int		len;
 
-	if (ft_strnstr(argv1, ".cub", ft_strlen(argv1)) == NULL)
+	len = ft_strlen(argv1);
+	if (len - 4 <= 0 || (ft_strncmp(argv1 + len - 4, ".cub", 5)))
 		return (1);
 	if (checkunknowntokens(argv1) || getparameters(argv1, cub3d)
 		|| check_cf(cub3d->ceiling_color_str)
